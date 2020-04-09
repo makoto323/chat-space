@@ -47,11 +47,11 @@ Things you may want to cover:
 - nelongs_to :group
 
 ## groupsテーブル
-|Column｜Type｜Options|
+|Column|Type|Options|
 |------|----|-------|
-|name｜string｜null: false｜
-|add_member｜string｜
-|member｜string｜null: false｜
+|name|string|null: false|
+|add_member|string|
+|member|string|null: false|
 
 ### Association
 - has_many :messages
