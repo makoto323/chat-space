@@ -37,24 +37,23 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|
 |image|string|
 |group_id|references|foreign_key: true|
 |user_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
-- nelongs_to :group
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|add_member|string|
-|member|string|null: false|
 
 ### Association
 - has_many :messages
+- has_many :groups_users
 - has_many :users, through: :groups_users
 
 ## groups_usersテーブル
