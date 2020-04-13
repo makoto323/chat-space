@@ -7,13 +7,19 @@
       .top-items__icons
         %ul
           %li
-            = link_to "#", class: "icons__icon" do
+            = link_to new_group_path, class: "icons__icon" do
               = icon('fas', 'edit')
           %li
             = link_to edit_user_path(current_user), class: "icons__icon" do
               = icon('fas', 'cog')
   .side-bar__group-list
     %p.group-list__group-name
-      techcamp
-    %p.group-list__new-message
-      まだメッセージがありません。
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .group__name
+              = group.name
+            .group__message
+              メッセージはまだありません。
+            %p.group-list__new-message
+              まだメッセージがありません。
