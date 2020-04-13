@@ -3,14 +3,14 @@
     .top-items
       .top-items__name
         %p
-          name
+          = current_user.name
       .top-items__icons
         %ul
           %li
             = link_to "#", class: "icons__icon" do
               = icon('fas', 'edit')
           %li
-            = link_to "#", class: "icons__icon" do
+            = link_to edit_user_path(current_user), class: "icons__icon" do
               = icon('fas', 'cog')
   .side-bar__group-list
     %p.group-list__group-name
