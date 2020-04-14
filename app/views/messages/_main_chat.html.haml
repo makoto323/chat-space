@@ -2,38 +2,27 @@
   .chat-main__group-info
     %ul
       %li.group-info__group-name
-        techcamp
+        = @group.name
       %li.group-info__member-name
         Member : name
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     %p
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
+
   .chat-main__message-list
-    %ul
-      %li.message-list__message-name
-        name
-      %li.message-list__message-time
-        2020/4/11(sat) 07:00:00
-    %p
-      おはようございます！
-    %ul
-      %li.message-list__message-name
-        name
-      %li.message-list__message-time
-        2020/4/11(sat) 12:00:00
-    %p
-      こんにちは！
-    %ul
-      %li.message-list__message-name
-        name
-      %li.message-list__message-time
-        2020/4/11(sat) 22:00:00
-    %p
-      おやすみなさい！
+    .messages
+      = render @messages
+
   .chat-main__message-form
-    .input-box
-      %input.input-box__text{:type => "text", :name => "text", :placeholder => "type a message", :value => ""}
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file"}
-    %input.submit-button{:type => "submit", :value => "Send"}
+    = form_for [@group, @message] do |f|
+      .form-box
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-button'
+
+
