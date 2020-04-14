@@ -21,17 +21,17 @@
     width: 260px;
     background-color: #2f3e51;
     margin: 0 auto;
-    p {
+    .group__name {
+      font-size: 15px;
+      padding: 20px 0 5px 0;
       color: $mainColor;
       font-weight: bold;
     }
-    p.group-list__group-name {
-      font-size: 15px;
-      padding: 20px 0 5px 0;
-    }
-    p.group-list__new-message {
+    .group__message {
       font-size: 11px;
       padding-bottom: 40px;
+      color: $mainColor;
+      font-weight: bold;
     }
   }
 }
@@ -121,15 +121,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .input-box {
-      width: 100%;
+    .form-box {
       display: flex;
-      align-items: center;
+    }
+    .input-box {
+      margin-left: 40px;
       position: relative;
       &__text {
         height: 50px;
-        width: 100%;
-        margin-left: 40px;
+        width: calc(100vw - 500px);
         &::placeholder {
           padding-left: 10px;
         }
@@ -140,9 +140,9 @@
         top: 10px;
         right: 10px;
       }
-        &__image input {
-          display: none;
-        }
+      .hidden {
+        display: none;
+      }
     }
     .submit-button {
       color: $mainColor;
