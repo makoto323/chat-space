@@ -94,6 +94,7 @@
   &__message-list {
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
     ul {
       padding: 35px 0 12px 40px;
     }
