@@ -9,6 +9,7 @@
 .side-bar {
   width: 300px;
   background-color: #2f3e51;
+  overflow: scroll;
   &__user-name {
     height: 100px;
     background-color: #253141;
