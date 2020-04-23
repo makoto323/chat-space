@@ -14,4 +14,5 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'chatspace-mkt-edition'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/chatspace-mkt-edition'
+
 end
