@@ -22,6 +22,9 @@
     width: 260px;
     background-color: #2f3e51;
     margin: 0 auto;
+    .group a {
+      text-decoration: none;
+    }
     .group__name {
       font-size: 15px;
       padding: 20px 0 5px 0;
@@ -115,6 +118,9 @@
       color: #434a54;
       font-size: 14px;
       padding: 0 0 11px 40px;
+    }
+    .lower-message__image {
+      padding-left: 40px;
     }
   }
   &__message-form {
