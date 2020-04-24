@@ -13,7 +13,7 @@ $(function(){
         <p class="messages">
             ${message.content}
         </p>
-        <img src=${message.image} >`
+        <img class="lower-message__image" src=${message.image} >`
       return html
     } else {
       let html =
