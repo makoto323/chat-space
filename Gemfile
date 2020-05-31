@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 end
 
 group :development do
@@ -55,6 +56,7 @@ end
 
 group :production do
   gem 'unicorn', '5.4.1'
+  gem 'pg'
 end
 
 group :development, :test do
